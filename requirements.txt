@@ -6,3 +6,4 @@ chromadb
 openai
 tiktoken
 streamlit
+pysqlite3-binary>=0.5.2
