@@ -1,6 +1,11 @@
 import os
 import streamlit as st
 
+import pysqlite3
+import sys
+
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.vectorstores import Chroma
